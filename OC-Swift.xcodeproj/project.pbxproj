@@ -13,6 +13,9 @@
 		25DD8FF01D5D7C6E001133C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25DD8FEE1D5D7C6E001133C8 /* Main.storyboard */; };
 		25DD8FF21D5D7C6E001133C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25DD8FF11D5D7C6E001133C8 /* Assets.xcassets */; };
 		25DD8FF51D5D7C6E001133C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25DD8FF31D5D7C6E001133C8 /* LaunchScreen.storyboard */; };
+		25DD8FFE1D5D7CAF001133C8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD8FFD1D5D7CAF001133C8 /* SecondViewController.m */; };
+		25DD90011D5DA3F2001133C8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DD90001D5DA3F2001133C8 /* ThirdViewController.swift */; };
+		25DD90041D5DC372001133C8 /* UIButton+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 25DD90031D5DC372001133C8 /* UIButton+Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		25DD8FF11D5D7C6E001133C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25DD8FF41D5D7C6E001133C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25DD8FF61D5D7C6E001133C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25DD8FFC1D5D7CAF001133C8 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		25DD8FFD1D5D7CAF001133C8 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		25DD8FFF1D5DA3F2001133C8 /* OC-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OC-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		25DD90001D5DA3F2001133C8 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		25DD90021D5DC372001133C8 /* UIButton+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Block.h"; sourceTree = "<group>"; };
+		25DD90031D5DC372001133C8 /* UIButton+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Block.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +67,21 @@
 		25DD8FE41D5D7C6E001133C8 /* OC-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				25DD90021D5DC372001133C8 /* UIButton+Block.h */,
+				25DD90031D5DC372001133C8 /* UIButton+Block.m */,
 				25DD8FE81D5D7C6E001133C8 /* AppDelegate.h */,
 				25DD8FE91D5D7C6E001133C8 /* AppDelegate.m */,
 				25DD8FEB1D5D7C6E001133C8 /* ViewController.h */,
 				25DD8FEC1D5D7C6E001133C8 /* ViewController.m */,
+				25DD8FFC1D5D7CAF001133C8 /* SecondViewController.h */,
+				25DD8FFD1D5D7CAF001133C8 /* SecondViewController.m */,
+				25DD90001D5DA3F2001133C8 /* ThirdViewController.swift */,
 				25DD8FEE1D5D7C6E001133C8 /* Main.storyboard */,
 				25DD8FF11D5D7C6E001133C8 /* Assets.xcassets */,
 				25DD8FF31D5D7C6E001133C8 /* LaunchScreen.storyboard */,
 				25DD8FF61D5D7C6E001133C8 /* Info.plist */,
 				25DD8FE51D5D7C6E001133C8 /* Supporting Files */,
+				25DD8FFF1D5DA3F2001133C8 /* OC-Swift-Bridging-Header.h */,
 			);
 			path = "OC-Swift";
 			sourceTree = "<group>";
@@ -149,7 +164,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DD8FFE1D5D7CAF001133C8 /* SecondViewController.m in Sources */,
 				25DD8FED1D5D7C6E001133C8 /* ViewController.m in Sources */,
+				25DD90011D5DA3F2001133C8 /* ThirdViewController.swift in Sources */,
+				25DD90041D5DC372001133C8 /* UIButton+Block.m in Sources */,
 				25DD8FEA1D5D7C6E001133C8 /* AppDelegate.m in Sources */,
 				25DD8FE71D5D7C6E001133C8 /* main.m in Sources */,
 			);
@@ -214,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -252,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -263,10 +281,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "OC-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhaopin.newproject.OC-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OC-Swift/OC-Swift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -274,10 +297,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "OC-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhaopin.newproject.OC-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OC-Swift/OC-Swift-Bridging-Header.h";
 			};
 			name = Release;
 		};
