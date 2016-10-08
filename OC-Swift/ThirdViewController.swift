@@ -19,9 +19,11 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.navigationItem.title = "Third"
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(ThirdViewController.fisrtItem(_:)))
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: #selector(ThirdViewController.fisrtItem(_:)))
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.fisrtItem(right:)))
         
 //        let btn = UIButton(frame: CGRectMake(100, 100, 100, 30))
 //        btn.setTitle("Button", forState: UIControlState.Normal)
@@ -37,7 +39,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        label.text = "Label"
 //        self.view.addSubview(label)
         
-        let tableView = UITableView(frame: CGRectMake(0, 0, self.view.bounds.width, self.view.bounds.height), style: UITableViewStyle.Grouped)
+        let tableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.grouped)
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
@@ -60,28 +62,28 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     // MARK: - TableViewDelegate
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    private func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 2
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let initIdentifier = "Cell"
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: initIdentifier)
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: initIdentifier)
         
         //下面两个属性对应subtitle
         cell.textLabel?.text = baby[indexPath.row]
         cell.detailTextLabel?.text = "baby\(indexPath.row)"
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         if indexPath.row == 1 {
             let vc = SecondViewController()
             self.navigationController?.pushViewController(vc, animated: true)
